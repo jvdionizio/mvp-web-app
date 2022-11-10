@@ -4,12 +4,12 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontSize: {
-      xs: 24,
-      sm: 28,
-      md: 32,
-      "2md": 36,
-      lg: 52,
-      xl: 64,
+      xs: 16,
+      sm: 20,
+      md: 24,
+      "2md": 28,
+      lg: 32,
+      xl: 36,
     },
     colors: {
       transparent:'transparent',

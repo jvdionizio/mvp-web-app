@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.banner1 {
+  background-image: url("../../images/fundoB1.png");
+  background-repeat: no-repeat;
+  bacheground-size: cover;
+}
