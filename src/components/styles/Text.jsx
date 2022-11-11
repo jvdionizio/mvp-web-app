@@ -1,46 +1,70 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Slot } from '@radix-ui/react-slot';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
-function Text({ children, size, font, color, link, weight }) {
+export default function Text({
+  size,
+  uppercase,
+  textColor,
+  children,
+  asChild,
+  decoration,
+  font,
+}) {
+  const Comp = asChild ? Slot : 'span';
+
   return (
-    <Slot
-      className={clsx( 
+    <Comp
+      className={ clsx(
+        'font-sans',
+        {
+          'text-purple-300': textColor === '300',
+          'text-purple-500': textColor === '500',
+          'text-purple-700': textColor === '700',
+          'text-purple-900': textColor === '900',
+          'text-white-smoked': textColor === 'white',
+        },
         {
           'text-xs': size === 'sm',
           'text-sm': size === 'md',
           'text-md': size === 'lg',
+          'text-2md': size === 'xl',
         },
         {
-          'text-white-smoked': color === 'white',
-          'text-purple-900': color === 'black',
+          'text-decoration-line: underline': decoration === 'underline',
+          'font-bold': decoration === 'bold',
+          'font-semibold': decoration === 'semibold',
         },
         {
           'font-sans': font === 'sans',
-          'font-ubuntu': font === 'ubuntu', 
+          'font-ubuntu': font === 'ubuntu',
         },
         {
-          'font-bold': weight === 'bold',
-          'font-medium': weight === 'medium',
-          'font-semibold': weight === 'semibold',
-          'font-normal': weight === 'regular',
+          uppercase,
         },
-        {
-          'hover:text-purple-300 tracking-tighter': link,
-        }
-       )}
+      ) }
     >
       {children}
-    </Slot>
-  )
+    </Comp>
+  );
 }
 
 Text.defaultProps = {
   size: 'md',
-  color: 'black',
+  asChild: false,
+  textColor: '900',
+  decoration: 'none',
+  uppercase: false,
   font: 'sans',
-  link: false,
-  weight: 'regular',
 };
 
-export default Text
+Text.propTypes = {
+  size: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  asChild: PropTypes.bool,
+  textColor: PropTypes.string,
+  decoration: PropTypes.string,
+  uppercase: PropTypes.bool,
+  font: PropTypes.string,
+};

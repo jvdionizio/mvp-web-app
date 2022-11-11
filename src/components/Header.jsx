@@ -1,24 +1,25 @@
-import React from 'react'
+import React from 'react';
+import { MagnifyingGlass, ShoppingCart, UserCircle } from 'phosphor-react';
 import logo from '../static/logo.svg';
-import { MagnifyingGlass, ShoppingCart, UserCircle } from 'phosphor-react'
-import Icon from './styles/Icon';
+import HeaderIcon from './styles/HeaderIcon';
 import Text from './styles/Text';
+import HeaderBtn from './styles/HeaderBtn';
 
 function Header() {
   return (
     <div
-      className='
+      className="
         bg-purple-700
         px-10
         py-5
         flex
         justify-between
         items-center
-      '
+      "
     >
-      <img alt='logo mpv' src={logo} className='w-36' />
+      <img alt="logo mpv" src={ logo } className="w-36" />
       <div
-        className='
+        className="
           2xl:w-1/3
           xl:w-1/3
           lg:w-1/2
@@ -26,36 +27,49 @@ function Header() {
           flex
           w-3/6
           justify-between
-        '
+        "
       >
-        <Text link color="white">
-          <p> PRODUTOS </p>
-        </Text>
-        <Text link color="white">
-          <p> MARCAS </p>
-        </Text>
-        <Text link color="white">
-          <p> SUPORTE </p>
-        </Text>
+        <HeaderBtn>
+          <button
+            type="button"
+            selected
+          >
+            PRODUTOS
+          </button>
+        </HeaderBtn>
+        <HeaderBtn>
+          <button
+            type="button"
+          >
+            MARCAS
+          </button>
+        </HeaderBtn>
+        <HeaderBtn>
+          <button
+            type="button"
+          >
+            SUPORTE
+          </button>
+        </HeaderBtn>
       </div>
       <div
-        className='
+        className="
           flex
           gap-3
-        '
+        "
       >
-        <Icon>
+        <HeaderIcon>
           <MagnifyingGlass />
-        </Icon>
-        <Icon>
+        </HeaderIcon>
+        <HeaderIcon>
           <ShoppingCart />
-        </Icon>
-        <Icon>
+        </HeaderIcon>
+        <HeaderIcon>
           <UserCircle />
-        </Icon>
+        </HeaderIcon>
       </div>
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;

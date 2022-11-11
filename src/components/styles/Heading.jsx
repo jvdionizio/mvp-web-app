@@ -1,12 +1,33 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Slot } from '@radix-ui/react-slot';
+import { clsx } from 'clsx';
 
-function Heading({ children }) {
+export default function Heading({ size, children, asChild }) {
+  const Comp = asChild ? Slot : 'h2';
+
   return (
-    <Slot className='text-xl font-bold text-purple-900 font-sans '>
+    <Comp
+      className={ clsx(
+        'text-gray-900 font-bold font-bowlby',
+        {
+          'text-lg': size === 'sm',
+          'text-xl': size === 'lg',
+        },
+      ) }
+    >
       {children}
-    </Slot>
-  )
+    </Comp>
+  );
 }
 
-export default Heading
+Heading.defaultProps = {
+  size: 'lg',
+  asChild: false,
+};
+
+Heading.propTypes = {
+  size: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  asChild: PropTypes.bool,
+};
