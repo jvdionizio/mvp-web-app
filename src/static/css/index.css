@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 .banner1 {
-  background-image: url("../../images/fundoB1.png");
-  background-repeat: no-repeat;
-  bacheground-size: cover;
+  background: rgb(180,121,232);
+  background: linear-gradient(0deg, rgba(180,121,232,0.9023984593837535) 0%, rgba(158,229,255,1) 100%);
 }

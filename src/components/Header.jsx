@@ -1,26 +1,42 @@
-import React from 'react';
+/* eslint-disable max-len */
+import React, { useState } from 'react';
 import { MagnifyingGlass, ShoppingCart, UserCircle } from 'phosphor-react';
 import logo from '../static/logo.svg';
 import HeaderIcon from './styles/HeaderIcon';
 import HeaderBtn from './styles/HeaderBtn';
 
 function Header() {
+  const [navBar, setNavBar] = useState(false);
+
+  const OITENTA = 80;
+
+  const changeBackground = () => (window.scrollY >= OITENTA ? setNavBar(true) : setNavBar(false));
+
+  const navBarStyle = `
+    z-50
+    px-10
+    py-5
+    flex
+    justify-between
+    items-center
+    fixed
+    w-screen
+    transition-colors
+    ${
+  navBar ? 'bg-purple-700' : 'bg-transparent'
+}
+  `;
+
+  window.addEventListener('scroll', changeBackground);
   return (
     <div
-      className="
-        bg-purple-700
-        px-10
-        py-5
-        flex
-        justify-between
-        items-center
-      "
+      className={ navBarStyle }
     >
       <img alt="logo mpv" src={ logo } className="w-36" />
       <div
         className="
-          2xl:w-1/3
-          xl:w-1/3
+          2xl:w-1/2
+          xl:w-1/2
           lg:w-1/2
           md:w-1/2
           flex

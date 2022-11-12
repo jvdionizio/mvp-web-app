@@ -4,8 +4,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
 import './styles/Slider.css';
-import { Navigation, Pagination, A11y } from 'swiper';
+import { Navigation, Pagination, A11y, Autoplay } from 'swiper';
 import Heading from './styles/Heading';
 import Text from './styles/Text';
 import Button from './styles/Button';
@@ -15,18 +16,29 @@ function Banner() {
   return (
     <div>
       <Swiper
-        modules={ [Navigation, Pagination, A11y] }
+        modules={ [Navigation, Pagination, A11y, Autoplay] }
         spaceBetween={ 50 }
         slidesPerView={ 1 }
         navigation
         pagination={ { clickable: true } }
+        autoplay={ { delay: 5000 } }
         loop
-        onSlideChange={ () => console.log('slide change') }
-        onSwiper={ (swiper) => console.log(swiper) }
+        draggable
       >
         <SwiperSlide>
-          <div className="w-full h-[46rem] banner1 flex items-center justify-center">
-            <div className="flex flex-col w-1/3 gap-6">
+          <div
+            className="
+            w-full
+            h-[46rem]
+            banner1
+            flex
+            flex-col
+            lg:flex-row
+            items-center
+            justify-center
+          "
+          >
+            <div className="flex flex-col w-1/2 lg:w-1/3 gap-6">
               <div>
                 <Heading asChild>
                   <h1>PLAY YOUR WAY</h1>
@@ -51,7 +63,7 @@ function Banner() {
                 </button>
               </Button>
             </div>
-            <img alt="teclado aurora" src={ tecladoB1 } className="w-1/2" />
+            <img alt="teclado aurora" src={ tecladoB1 } className="w-1/2 lg:w-1/3" />
           </div>
         </SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>

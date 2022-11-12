@@ -7,7 +7,7 @@ function CategoriesCard({ url, name }) {
     <div>
       <img src={ url } alt={ `foto de ${name}` } />
       <hr />
-      <Text asChild><p>{ name }</p></Text>
+      <Text asChild uppercase decoration="medium"><p>{ name }</p></Text>
     </div>
   );
 }

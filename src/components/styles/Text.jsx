@@ -34,6 +34,7 @@ export default function Text({
         {
           'text-decoration-line: underline': decoration === 'underline',
           'font-bold': decoration === 'bold',
+          'font-medium': decoration === 'medium',
           'font-semibold': decoration === 'semibold',
         },
         {
