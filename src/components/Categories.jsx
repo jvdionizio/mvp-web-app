@@ -9,7 +9,7 @@ import gabineteImg from '../images/cate.gabinete.png';
 function Categories() {
   return (
     <div>
-      <Heading>Categorias</Heading>
+      <Heading asChild><h3>Categorias</h3></Heading>
       <div>
         <CategoriesCard url={ headsetImg } name="headset" />
         <CategoriesCard url={ mouseImg } name="mouse" />

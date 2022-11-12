@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../components/Banner';
 import Header from '../components/Header';
 import Categories from '../components/Categories';
+import ProductSlide from '../components/ProductSlide';
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
       <Header />
       <Banner />
       <Categories />
+      <ProductSlide type="most-sold" />
     </div>
   );
 }

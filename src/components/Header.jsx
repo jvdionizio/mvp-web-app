@@ -2,7 +2,6 @@ import React from 'react';
 import { MagnifyingGlass, ShoppingCart, UserCircle } from 'phosphor-react';
 import logo from '../static/logo.svg';
 import HeaderIcon from './styles/HeaderIcon';
-import Text from './styles/Text';
 import HeaderBtn from './styles/HeaderBtn';
 
 function Header() {

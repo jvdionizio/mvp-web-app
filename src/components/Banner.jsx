@@ -2,6 +2,10 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import './styles/Slider.css';
+import { Navigation, Pagination, A11y } from 'swiper';
 import Heading from './styles/Heading';
 import Text from './styles/Text';
 import Button from './styles/Button';
@@ -11,8 +15,12 @@ function Banner() {
   return (
     <div>
       <Swiper
+        modules={ [Navigation, Pagination, A11y] }
         spaceBetween={ 50 }
         slidesPerView={ 1 }
+        navigation
+        pagination={ { clickable: true } }
+        loop
         onSlideChange={ () => console.log('slide change') }
         onSwiper={ (swiper) => console.log(swiper) }
       >
@@ -20,7 +28,7 @@ function Banner() {
           <div className="w-full h-[46rem] banner1 flex items-center justify-center">
             <div className="flex flex-col w-1/3 gap-6">
               <div>
-                <Heading>
+                <Heading asChild>
                   <h1>PLAY YOUR WAY</h1>
                 </Heading>
                 <span>
