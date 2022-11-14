@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { clsx } from 'clsx';
 import { Slot } from '@radix-ui/react-slot';
 
-function HeaderBtn({ children, selected }, props) {
+function CategoriesBtn({ children, selected }, props) {
   return (
     <Slot
       type="button"
@@ -14,18 +14,13 @@ function HeaderBtn({ children, selected }, props) {
         'bg-transparent',
         'font-bowlby',
         'font-semibold',
-        'text-md',
+        'text-sm',
         'tracking-tighter',
         'text-white-smoked',
         'text-sm',
+        'uppercase',
         'transition-colors',
         'hover:text-purple-500',
-        {
-          'border-b-4': selected,
-        },
-        {
-          'border-purple-300': selected,
-        },
         {
           'text-purple-300': selected,
         },
@@ -37,13 +32,13 @@ function HeaderBtn({ children, selected }, props) {
   );
 }
 
-HeaderBtn.defaultProps = {
+CategoriesBtn.defaultProps = {
   selected: false,
 };
 
-HeaderBtn.propTypes = {
+CategoriesBtn.propTypes = {
   children: PropTypes.node.isRequired,
   selected: PropTypes.bool,
 };
 
-export default HeaderBtn;
+export default CategoriesBtn;
