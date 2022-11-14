@@ -1,10 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Slot } from '@radix-ui/react-slot';
+import { clsx } from 'clsx';
 
 function TextInputIcon({ children }) {
   return (
-    <Slot className="w-6 h-6 text-gray-400">
+    <Slot
+      className={ clsx(
+        'w-7',
+        'h-7',
+        'text-purple-900',
+      ) }
+    >
       {children}
     </Slot>
   );

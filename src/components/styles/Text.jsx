@@ -36,6 +36,7 @@ export default function Text({
           'font-bold': decoration === 'bold',
           'font-medium': decoration === 'medium',
           'font-semibold': decoration === 'semibold',
+          'font-light': decoration === 'light',
         },
         {
           'font-sans': font === 'sans',

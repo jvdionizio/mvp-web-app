@@ -6,3 +6,8 @@
   background: rgb(180,121,232);
   background: linear-gradient(0deg, rgba(180,121,232,0.9023984593837535) 0%, rgba(158,229,255,1) 100%);
 }
+
+.footer {
+  background: rgb(180,121,232);
+  background: linear-gradient(0deg, rgba(180,121,232,0.9023984593837535) 46%, rgba(255,255,255,1) 100%);
+}

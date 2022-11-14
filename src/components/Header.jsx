@@ -2,15 +2,36 @@
 import React, { useState } from 'react';
 import { MagnifyingGlass, ShoppingCart, UserCircle } from 'phosphor-react';
 import logo from '../static/logo.svg';
-import HeaderIcon from './styles/HeaderIcon';
+import Icon from './styles/Icon';
 import HeaderBtn from './styles/HeaderBtn';
 
 function Header() {
-  const [navBar, setNavBar] = useState(false);
+  const [navBarTransparent, setNavBarTransparent] = useState(false);
+  const [showNavBar, setShowNavBar] = useState(true);
+  const [position, setPosition] = useState(0);
 
   const OITENTA = 80;
 
-  const changeBackground = () => (window.scrollY >= OITENTA ? setNavBar(true) : setNavBar(false));
+  const changeBackground = () => (window.scrollY >= OITENTA ? setNavBarTransparent(true) : setNavBarTransparent(false));
+
+  const hideAndShow = () => {
+    const positionNow = window.scrollY;
+    if (positionNow === 0) {
+      setShowNavBar(true);
+    }
+    if (positionNow > position) {
+      setShowNavBar(false);
+    }
+    if (positionNow < position) {
+      setShowNavBar(true);
+    }
+    setPosition(positionNow);
+  };
+
+  const handleScroll = () => {
+    changeBackground();
+    hideAndShow();
+  };
 
   const navBarStyle = `
     z-50
@@ -21,13 +42,14 @@ function Header() {
     items-center
     fixed
     w-screen
-    transition-colors
+    transition-all
+    ${showNavBar ? 'top-0 ' : '-top-28 '}
     ${
-  navBar ? 'bg-purple-700' : 'bg-transparent'
+  navBarTransparent ? 'bg-purple-700' : 'bg-transparent'
 }
   `;
 
-  window.addEventListener('scroll', changeBackground);
+  window.addEventListener('scroll', handleScroll);
   return (
     <div
       className={ navBarStyle }
@@ -73,15 +95,15 @@ function Header() {
           gap-3
         "
       >
-        <HeaderIcon>
+        <Icon>
           <MagnifyingGlass />
-        </HeaderIcon>
-        <HeaderIcon>
+        </Icon>
+        <Icon>
           <ShoppingCart />
-        </HeaderIcon>
-        <HeaderIcon>
+        </Icon>
+        <Icon>
           <UserCircle />
-        </HeaderIcon>
+        </Icon>
       </div>
     </div>
   );

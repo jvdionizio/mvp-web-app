@@ -16,6 +16,8 @@ function TextInputInput(props) {
         'text-xs',
         'placeholder:text-gray-400',
         'outline-none',
+        'py-4',
+        'px-3',
         'w-full',
         {
           'text-center': props.type === 'number',

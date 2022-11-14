@@ -10,9 +10,11 @@ function Home() {
     <div className="w-full bg-white-smoked">
       <Header />
       <Banner />
-      <Categories />
-      <ProductSlide type="most-sold" />
-      <ProductSlide />
+      <div className="flex flex-col gap-12 my-10">
+        <Categories />
+        <ProductSlide type="most-sold" />
+        <ProductSlide />
+      </div>
       <Footer />
     </div>
   );

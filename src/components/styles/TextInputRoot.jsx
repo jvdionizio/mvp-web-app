@@ -1,17 +1,16 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { clsx } from 'clsx';
 
-function TextInputRoot({ children, error }) {
+function TextInputRoot({ children, error }, props) {
   return (
-    <div
+    <label
       className={ clsx(
         'flex',
         'items-center',
         'gap-3',
         'h-12',
-        'py-4',
-        'px-3',
         'rounded',
         'bg-white-1000',
         'w-full',
@@ -23,9 +22,10 @@ function TextInputRoot({ children, error }) {
         'focus-within:ring-2',
         'focus-within:ring-yellow-500',
       ) }
+      { ...props }
     >
       {children}
-    </div>
+    </label>
   );
 }
 
