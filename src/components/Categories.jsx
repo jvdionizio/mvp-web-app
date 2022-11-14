@@ -8,13 +8,14 @@ import gabineteImg from '../images/cate.gabinete.png';
 
 function Categories() {
   return (
-    <div>
+    <div className='m-14'>
       <Heading asChild><h3>Categorias</h3></Heading>
-      <div>
+      <div className='flex row-auto gap-x-16'>
         <CategoriesCard url={ headsetImg } name="headset" />
         <CategoriesCard url={ mouseImg } name="mouse" />
         <CategoriesCard url={ tecladoImg } name="teclado" />
         <CategoriesCard url={ gabineteImg } name="gabinete" />
+
       </div>
     </div>
   );
