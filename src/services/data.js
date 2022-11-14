@@ -3,16 +3,6 @@ import { build } from "vite";
 const products = {
     headsets: [
         {
-            name: 'Headset',
-            value: 900.00,
-            description: "muito gamers",
-            evaluation: 2,
-            urls: [
-                "link",
-                "link2",
-            ]
-        },
-        {
             name: 'Headset gamer premium com som surround 7.1 VOID RGB ELITE USB - Branco',
             value: 999.90,
             description: "Escute tudo, de um leve passo a uma retumbante explosão, graças aos drivers de áudio premium em neodímio de alta densidade e 50mm com ajuste personalizado que contam com um amplo intervalo de frequência de 20hz-30.000hz. muito gamers  Com o poderoso software iCUE da CORSAIR, você personaliza as configurações do equalizador de áudio, aproveita som surround 7.1 imersivo, controla o som de retorno e sincroniza a iluminação RGB com todos os periféricos, resfriadores, ventoinhas e outros produtos CORSAIR compatíveis.Um microfone omnidirecional apresenta sua voz com uma clareza excepcional, enquanto uma função articulada para silenciar e um indicador LED integrado do modo 'silenciar' garantem que você saiba quando será ouvido(a), e quando não. ",
@@ -34,7 +24,7 @@ const products = {
             description: "O headset gamer CORSAIR HS80 RGB WIRELESS conta com conexão hiper-rápida SLIPSTREAM WIRELESS, que produz sons incrivelmente detalhados pelos drivers de áudio em neodímio de 50mm com ajuste personalizado com a tecnologia imersiva Dolby Atmos.",
             evaluation: 4,
             brand: "corsair",
-            conector:"bluetooth",
+            conector:"wireless",
             urls: [
                 "https://images.kabum.com.br/produtos/fotos/216705/headset-gamer-sem-fio-corsair-hs80-premium-rgb-surround-dolby-atmos-wireless-drivers-50mm-preto-ca-9011235-na_1636559754_gg.jpg",
                 "https://images.kabum.com.br/produtos/fotos/216705/headset-gamer-sem-fio-corsair-hs80-premium-rgb-surround-dolby-atmos-wireless-drivers-50mm-preto-ca-9011235-na_1636559755_gg.jpg",
@@ -84,7 +74,7 @@ const products = {
             description: ' Liberdade total com alcance sem fio de 20 m e transmissão de áudio sem fio LIGHTSPEED. Aproveite a longa duração da bateria e jogue até 29 horas. Reproduza em estéreo no PlayStation®. Personalize a iluminação do headset em todo o espectro, aprox. 16,8 milhões de cores. Jogue em cores com iluminação LIGHTSYNC RGB frontal e zona dupla e escolha entre animações predefinidas ou crie suas próprias animações com o software G HUB.',
             evaluation: 5,
             brand: "logitech",
-            conector:"bluetooth",
+            conector:"wireless",
             urls: [
                 "https://images.kabum.com.br/produtos/fotos/120487/headset-gamer-sem-fio-logitech-g733-rgb-lightsync-7-1-dolby-surround-com-blue-voice-preto-981-000863_1612874214_gg.jpg",
             ]
