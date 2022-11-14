@@ -23,7 +23,7 @@ function SliderProducts() {
       >
         <SwiperSlide>
           <div className="p-5 flex items-center gap-8">
-            <img src={ headsetImg } alt="headset" className="w-5/12 p-7 border" />
+            <img src={ headsetImg } alt="headset" className="w-5/12 p-7 border rounded-2xl" />
             <div className="flex flex-col justify-around w-4/12 gap-5">
               <Text asChild size="xl">
                 <p>Headset Gamer Sem Fio Logitech G735 LIGHTSPEED</p>
@@ -41,7 +41,7 @@ function SliderProducts() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="p-5 flex items-center gap-8">
-            <img src={ headsetImg } alt="headset" className="w-5/12 p-7 border" />
+            <img src={ headsetImg } alt="headset" className="w-5/12 p-7 border rounded-2xl" />
             <div className="flex flex-col justify-around w-4/12 gap-5">
               <Text asChild size="xl">
                 <p>Headset Gamer Sem Fio Logitech G735 LIGHTSPEED</p>
@@ -59,7 +59,7 @@ function SliderProducts() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="p-5 flex items-center gap-8">
-            <img src={ headsetImg } alt="headset" className="w-5/12 p-7 border" />
+            <img src={ headsetImg } alt="headset" className="w-5/12 p-7 border rounded-2xl" />
             <div className="flex flex-col justify-around w-4/12 gap-5">
               <Text asChild size="xl">
                 <p>Headset Gamer Sem Fio Logitech G735 LIGHTSPEED</p>
@@ -77,7 +77,7 @@ function SliderProducts() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="p-5 flex items-center gap-8">
-            <img src={ headsetImg } alt="headset" className="w-5/12 p-7 border" />
+            <img src={ headsetImg } alt="headset" className="w-5/12 p-7 border rounded-2xl" />
             <div className="flex flex-col justify-around w-4/12 gap-5">
               <Text asChild size="xl">
                 <p>Headset Gamer Sem Fio Logitech G735 LIGHTSPEED</p>
