@@ -27,7 +27,7 @@ const products = {
             description: "O headset gamer CORSAIR HS80 RGB WIRELESS conta com conexão hiper-rápida SLIPSTREAM WIRELESS, que produz sons incrivelmente detalhados pelos drivers de áudio em neodímio de 50mm com ajuste personalizado com a tecnologia imersiva Dolby Atmos.",
             evaluation: 4,
             brand: "corsair",
-            conector:"bluetooth",
+            conector:"wireless",
             urls: [
                 "https://images.kabum.com.br/produtos/fotos/216705/headset-gamer-sem-fio-corsair-hs80-premium-rgb-surround-dolby-atmos-wireless-drivers-50mm-preto-ca-9011235-na_1636559754_gg.jpg",
                 "https://images.kabum.com.br/produtos/fotos/216705/headset-gamer-sem-fio-corsair-hs80-premium-rgb-surround-dolby-atmos-wireless-drivers-50mm-preto-ca-9011235-na_1636559755_gg.jpg",
@@ -81,7 +81,7 @@ const products = {
             description: ' Liberdade total com alcance sem fio de 20 m e transmissão de áudio sem fio LIGHTSPEED. Aproveite a longa duração da bateria e jogue até 29 horas. Reproduza em estéreo no PlayStation®. Personalize a iluminação do headset em todo o espectro, aprox. 16,8 milhões de cores. Jogue em cores com iluminação LIGHTSYNC RGB frontal e zona dupla e escolha entre animações predefinidas ou crie suas próprias animações com o software G HUB.',
             evaluation: 5,
             brand: "logitech",
-            conector:"bluetooth",
+            conector:"wireless",
             urls: [
                 "https://images.kabum.com.br/produtos/fotos/120487/headset-gamer-sem-fio-logitech-g733-rgb-lightsync-7-1-dolby-surround-com-blue-voice-preto-981-000863_1612874214_gg.jpg",
             ]

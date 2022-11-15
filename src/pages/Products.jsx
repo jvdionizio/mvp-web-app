@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Header from '../components/Header';
 
 function Products() {
   return (
     <div>
-      <h1>This is Products.</h1>
+      <Header />
     </div>
-  )
+  );
 }
 
-export default Products
+export default Products;
