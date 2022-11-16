@@ -24,20 +24,15 @@ function Products() {
           <div>
             <ProductsCard />
             <ProductsCard />
-          </div>
-          <div>
             <ProductsCard />
             <ProductsCard />
           </div>
           <div>
             <ProductsCard />
             <ProductsCard />
-          </div>
-          <div>
             <ProductsCard />
             <ProductsCard />
           </div>
-
         </div>
          
       </div>

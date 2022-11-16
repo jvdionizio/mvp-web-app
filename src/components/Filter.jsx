@@ -20,6 +20,7 @@ function Filter() {
         flex-col
         w-1/4
         items-center
+        
       "
       >
         <div className="flex flex-col gap-3 p-3">

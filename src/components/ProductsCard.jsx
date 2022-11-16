@@ -19,12 +19,12 @@ function ProductsCard() {
         flex
         flex-row
         justify-between
-        w-3/4
         items-center
+        my-16
       "
     >
       <div className="flex flex-col gap-3">
-        <img alt="Logo Redragon" src={ headsetImg } className="w-1/2 px-3 center" />
+        <img alt="Logo Redragon" src={ headsetImg } className="2/3 px-3 center" />
         <Text asChild decoration="medium">
           <p className="text-center">HyperX Cloud Orbit S - Headset gamer</p> 
         </Text>
