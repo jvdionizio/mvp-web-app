@@ -6,14 +6,15 @@ import Text from './styles/Text';
 import TextInputInput from './styles/TextInputInput';
 import TextInputRoot from './styles/TextInputRoot';
 import Icon from './styles/Icon';
+import supbanner from '../images/supbanner.jpg';
 
 function BannerSupport() {
   return (
     <div>
       <div
         className="
+        h-[40rem]
         w-full
-        h-[32rem]
         flex
         flex-col
         items-center
@@ -22,7 +23,7 @@ function BannerSupport() {
         "
       >
         <div>
-          <div className="w-full">
+          <div>
             <Heading textColor="000">
               Bem-vindo ao suporte da MVP
             </Heading>
@@ -44,23 +45,6 @@ function BannerSupport() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="text-center py-6">
-        <Text decoration="semibold" size="lg">
-          <p className="py-5">Informações sobre reembolsos e devoluções</p>
-        </Text>
-        <Text>
-          <p className="py-5">
-            Para obter informações sobre reembolsos/devoluções
-            para seus produtos da MVP, consulte o seguinte site:
-          </p>
-        </Text>
-        <Text textColor="300" decoration="underline">
-          <p className="py-5">
-            Informações sobre reembolsos/devoluções de produtos
-            comprados em mvp.com
-          </p>
-        </Text>
       </div>
     </div>
   );
