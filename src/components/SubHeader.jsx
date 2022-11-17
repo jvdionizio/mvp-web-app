@@ -9,9 +9,9 @@ function SubHeader() {
 
   const [selected, setSelected] = useState({
     headsets: false,
-    teclados: false,
-    mouses: false,
-    gabinetes: false,
+    keyboard: false,
+    mice: false,
+    case: false,
     logitech: false,
     redDragon: false,
     corsair: false,
@@ -24,13 +24,13 @@ function SubHeader() {
   const linksList = {
     products: [
       { headsets: 'headsets' },
-      { teclados: 'teclados' },
-      { mouses: 'mouses' },
-      { gabinetes: 'gabinetes' },
+      { keyboard: 'teclados' },
+      { mice: 'mouses' },
+      { case: 'gabinetes' },
     ],
     brands: [
       { logitech: 'logitech' },
-      { redDragon: 'reddragon' },
+      { redDragon: 'red dragon' },
       { corsair: 'corsair' },
       { hyperX: 'hyperX' },
     ],
@@ -70,7 +70,6 @@ function SubHeader() {
         {
           linksList[pathName].map((obj) => {
             const key = Object.keys(obj)[0];
-            console.log(obj[key]);
             return (
               <CategoriesBtn
                 key={ key }

@@ -7,12 +7,9 @@ function Icon({ children, weight }) {
   return (
     <Slot
       className={ clsx(
-        'w-6',
-        'h-6',
+        'w-8',
+        'h-8',
         'text-white-smoked',
-        {
-          'w-9 h-9': weight === 'fill',
-        },
         'hover:text-purple-300',
       ) }
       weight={ weight }

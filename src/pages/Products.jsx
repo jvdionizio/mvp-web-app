@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import Context from '../context/Context';
 import Text from '../components/styles/Text';
 import Heading from '../components/styles/Heading';
 import Header from '../components/Header';
@@ -7,37 +9,45 @@ import Filter from '../components/Filter';
 import ProductsCard from '../components/ProductsCard';
 
 function Products() {
+  const {
+    products,
+    productsOnScreen,
+    setProductsOnScreen,
+  } = useContext(Context);
+  const { pathname } = useLocation();
+  const pathName = pathname.split('/')[2];
+  useEffect(() => {
+    setProductsOnScreen(products[pathName]);
+  }, [pathName]);
   return (
     <div className="w-full bg-white-smoked">
       <Header />
-      <div className='flex flex-col px-5'>
+      <div className="w-11/12 flex flex-col mt-40 m-auto">
         <div>
-          <Heading>
+          <Heading asChild>
             <h3>HEADSETS</h3>
           </Heading>
           <Text textColor="700">
             <p>O melhor audio para você</p>
           </Text>
         </div>
-        <div className="flex row-auto gap-16">
+        <div className="w-full flex gap-16">
           <Filter />
-          <div>
-            <ProductsCard />
-            <ProductsCard />
-            <ProductsCard />
-            <ProductsCard />
-          </div>
-          <div>
-            <ProductsCard />
-            <ProductsCard />
-            <ProductsCard />
-            <ProductsCard />
+          <div className="w-10/12 flex flex-wrap justify-between gap-y-10">
+            {
+              productsOnScreen && productsOnScreen.map((product, index) => (
+                <ProductsCard
+                  key={ index }
+                  url={ product.urls[0] }
+                  price={ product.value }
+                  name={ product.name }
+                />
+              ))
+            }
           </div>
         </div>
-         
       </div>
       <Footer />
-      
     </div>
   );
 }
