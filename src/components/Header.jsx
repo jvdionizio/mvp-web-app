@@ -131,7 +131,7 @@ function Header() {
           </Icon>
         </div>
       </div>
-      {pageName !== '' && <SubHeader />}
+      { (pageName === 'products' || pageName === 'support' || pageName === 'brands') && <SubHeader /> }
     </div>
   );
 }

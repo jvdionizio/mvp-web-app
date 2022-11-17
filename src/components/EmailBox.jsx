@@ -29,7 +29,7 @@ function EmailBox() {
       </div>
       <span className="flex">
         <Checkbox />
-        <span className='px-3'>
+        <span className="px-3">
           <Text textColor="900" decoration="light" asChild size="sm">
             <p>
               Sim, quero receber notícias e e-mails sobre produtos. Leia nossa

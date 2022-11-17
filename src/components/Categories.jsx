@@ -11,10 +11,10 @@ function Categories() {
     <div className="w-11/12 m-auto">
       <Heading asChild><h3>Categorias</h3></Heading>
       <div className="flex row-auto gap-16">
-        <CategoriesCard url={ headsetImg } name="headset" />
-        <CategoriesCard url={ mouseImg } name="mouse" />
-        <CategoriesCard url={ tecladoImg } name="teclado" />
-        <CategoriesCard url={ gabineteImg } name="gabinete" />
+        <CategoriesCard url={ headsetImg } name="headsets" />
+        <CategoriesCard url={ mouseImg } name="mouses" />
+        <CategoriesCard url={ tecladoImg } name="teclados" />
+        <CategoriesCard url={ gabineteImg } name="gabinetes" />
       </div>
     </div>
   );

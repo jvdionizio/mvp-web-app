@@ -32,7 +32,7 @@ function Products() {
           </Text>
         </div>
         <div className="w-full flex gap-16">
-          <Filter />
+          <Filter pathName={ pathName } />
           <div className="w-10/12 flex flex-wrap justify-between gap-y-10">
             {
               productsOnScreen && productsOnScreen.map((product, index) => (

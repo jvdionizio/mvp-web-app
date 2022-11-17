@@ -19,134 +19,26 @@ function Provider({ children }) {
   const [corsair, setCorsair] = useState([]);
   const [hyperX, setHyperX] = useState([]);
   const [productsOnScreen, setProductsOnScreen] = useState([]);
-  const [headsetFilters, setHeadsetFilters] = useState({
-    brand: '',
-    conector: '',
-  });
-  const [keyboardFilters, setKeyboardFilters] = useState({
-    brand: '',
-  });
-  const [miceFilters, setMiceFilters] = useState({
-    brand: '',
-  });
-  const [caseFilters, setCaseFilters] = useState({
-    brand: '',
-    casesize: '',
-    material: '',
-    sidepanel: '',
+  const [productsOnScreenFilter, setProductsOnScreenFilter] = useState({
+    brand: [],
+    conector: [],
+    casesize: [],
+    material: [],
+    sidepanel: [],
   });
 
-  const filterHeadsets = () => {
-    const { brand, conector } = headsetFilters;
-    const filteredHeadsets = data.headsets.filter((headset) => {
-      if (brand && conector) {
-        return headset.brand.toLowerCase() === brand && headset.conector.toLowerCase() === conector;
-      }
-      if (brand) {
-        return headset.brand.toLowerCase() === brand;
-      }
-      if (conector) {
-        return headset.conector.toLowerCase() === conector;
-      }
-      return true;
+  const filterProductsOnScreen = (pageName) => {
+    const { brand, conector, casesize, material, sidepanel } = productsOnScreenFilter;
+    const filteredProducts = products[pageName].filter((product) => {
+      const { brands, conectors, casesizes, materials, sidepanels } = product;
+      const brandFilter = brand.length === 0 || brand.includes(brands);
+      const conectorFilter = conector.length === 0 || conector.includes(conectors);
+      const casesizeFilter = casesize.length === 0 || casesize.includes(casesizes);
+      const materialFilter = material.length === 0 || material.includes(materials);
+      const sidepanelFilter = sidepanel.length === 0 || sidepanel.includes(sidepanels);
+      return brandFilter && conectorFilter && casesizeFilter && materialFilter && sidepanelFilter;
     });
-    setProductsOnScreen(filteredHeadsets);
-  };
-
-  const filterKeyboard = () => {
-    const { brand } = keyboardFilters;
-    const filteredKeyboard = data.keyboard.filter((keyboard) => {
-      if (brand) {
-        return keyboard.brand.toLowerCase() === brand;
-      }
-      return true;
-    });
-    setProductsOnScreen(filteredKeyboard);
-  };
-
-  const filterMice = () => {
-    const { brand } = miceFilters;
-    const filteredMice = data.mice.filter((mice) => {
-      if (brand) {
-        return mice.brand.toLowerCase() === brand;
-      }
-      return true;
-    });
-    setProductsOnScreen(filteredMice);
-  };
-
-  const filterCase = () => {
-    const { brand, casesize, material, sidepanel } = caseFilters;
-    const filteredCase = data.case.filter((cases) => {
-      if (brand && casesize && material && sidepanel) {
-        return (
-          cases.brand === brand
-          && cases.casesize.toLowerCase() === casesize
-          && cases.material.toLowerCase() === material
-          && cases.sidepanel.toLowerCase() === sidepanel
-        );
-      }
-      if (brand && casesize && material) {
-        return (
-          cases.brand.toLowerCase() === brand
-          && cases.casesize.toLowerCase() === casesize
-          && cases.material.toLowerCase() === material
-        );
-      }
-      if (brand && casesize && sidepanel) {
-        return (
-          cases.brand.toLowerCase() === brand
-          && cases.casesize.toLowerCase() === casesize
-          && cases.sidepanel.toLowerCase() === sidepanel
-        );
-      }
-      if (brand && material && sidepanel) {
-        return (
-          cases.brand.toLowerCase() === brand
-          && cases.material.toLowerCase() === material
-          && cases.sidepanel.toLowerCase() === sidepanel
-        );
-      }
-      if (casesize && material && sidepanel) {
-        return (
-          cases.casesize.toLowerCase() === casesize
-          && cases.material.toLowerCase() === material
-          && cases.sidepanel.toLowerCase() === sidepanel
-        );
-      }
-      if (brand && casesize) {
-        return cases.brand.toLowerCase() === brand && cases.casesize.toLowerCase() === casesize;
-      }
-      if (brand && material) {
-        return cases.brand.toLowerCase() === brand && cases.material.toLowerCase() === material;
-      }
-      if (brand && sidepanel) {
-        return cases.brand.toLowerCase() === brand && cases.sidepanel.toLowerCase() === sidepanel;
-      }
-      if (casesize && material) {
-        return cases.casesize.toLowerCase() === casesize && cases.material.toLowerCase() === material;
-      }
-      if (casesize && sidepanel) {
-        return cases.casesize.toLowerCase() === casesize && cases.sidepanel.toLowerCase() === sidepanel;
-      }
-      if (material && sidepanel) {
-        return cases.material.toLowerCase() === material && cases.sidepanel.toLowerCase() === sidepanel;
-      }
-      if (brand) {
-        return cases.brand.toLowerCase() === brand;
-      }
-      if (casesize) {
-        return cases.casesize.toLowerCase() === casesize;
-      }
-      if (material) {
-        return cases.material.toLowerCase() === material;
-      }
-      if (sidepanel) {
-        return cases.sidepanel.toLowerCase() === sidepanel;
-      }
-      return true;
-    });
-    setProductsOnScreen(filteredCase);
+    setProductsOnScreen(filteredProducts);
   };
 
   useEffect(() => {
@@ -163,15 +55,11 @@ function Provider({ children }) {
         setHyperX((prevState) => [...prevState, product]);
       }
     });
-    setProductsOnScreen(headsets);
   }, []);
 
   useEffect(() => {
-    filterHeadsets();
-    filterCase();
-    filterKeyboard();
-    filterMice();
-  }, [headsetFilters, keyboardFilters, miceFilters, caseFilters]);
+
+  }, []);
 
   const value = useMemo(
     () => ({
@@ -186,14 +74,9 @@ function Provider({ children }) {
       gabinetes,
       products,
       productsOnScreen,
-      headsetFilters,
-      keyboardFilters,
-      miceFilters,
-      caseFilters,
-      setCaseFilters,
-      setHeadsetFilters,
-      setKeyboardFilters,
-      setMiceFilters,
+      productsOnScreenFilter,
+      filterProductsOnScreen,
+      setProductsOnScreenFilter,
       setProductsOnScreen,
       setProducts,
       setHeadsets,
@@ -213,10 +96,7 @@ function Provider({ children }) {
       gabinetes,
       products,
       productsOnScreen,
-      headsetFilters,
-      keyboardFilters,
-      miceFilters,
-      caseFilters,
+      productsOnScreenFilter,
     ],
   );
 

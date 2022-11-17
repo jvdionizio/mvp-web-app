@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable react/jsx-max-depth */
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
