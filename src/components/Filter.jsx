@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Text from './styles/Text';
 import BrandFilters from './BrandFilters';
 
-function Filter() {
+function Filter(pageName) {
   return (
     <div
       className="
@@ -24,30 +25,15 @@ function Filter() {
         <Text asChild decoration="bold">
           <p className="text-left">Marcas</p>
         </Text>
-        <hr />
         <BrandFilters />
         <hr />
-        <Text asChild decoration="bold">
-          <p className="text-left">Conectores</p>
-        </Text>
-        <div className="flex items-center">
-
-          <Text>
-            <p className="px-3">USB</p>
-          </Text>
-        </div>
-        <div className="flex items-center">
-
-          <Text>
-            <p className="px-3">Wireless</p>
-          </Text>
-        </div>
-        <div className="flex items-center">
-
-          <Text>
-            <p className="px-3">P2</p>
-          </Text>
-        </div>
+        {
+          pageName === 'headsets' && (
+            <Text asChild decoration="bold">
+              <p className="text-left">Conectores</p>
+            </Text>
+          )
+        }
         <hr />
         <Text asChild decoration="bold">
           <p className="text-left">Audio</p>
@@ -69,5 +55,9 @@ function Filter() {
     </div>
   );
 }
+
+Filter.propTypes = {
+  pageName: PropTypes.string.isRequired,
+};
 
 export default Filter;

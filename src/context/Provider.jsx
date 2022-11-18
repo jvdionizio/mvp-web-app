@@ -28,17 +28,85 @@ function Provider({ children }) {
   });
 
   const filterProductsOnScreen = (pageName) => {
-    const { brand, conector, casesize, material, sidepanel } = productsOnScreenFilter;
-    const filteredProducts = products[pageName].filter((product) => {
-      const { brands, conectors, casesizes, materials, sidepanels } = product;
-      const brandFilter = brand.length === 0 || brand.includes(brands);
-      const conectorFilter = conector.length === 0 || conector.includes(conectors);
-      const casesizeFilter = casesize.length === 0 || casesize.includes(casesizes);
-      const materialFilter = material.length === 0 || material.includes(materials);
-      const sidepanelFilter = sidepanel.length === 0 || sidepanel.includes(sidepanels);
-      return brandFilter && conectorFilter && casesizeFilter && materialFilter && sidepanelFilter;
-    });
-    setProductsOnScreen(filteredProducts);
+    const { brand: brandFilter, conector: conectorFilter, casesize: casesizeFilter, material: materialFilter, sidepanel: sidepanelFilter } = productsOnScreenFilter;
+    const productsOnScreenFilterArray = [];
+    if (pageName === 'headsets') {
+      if (brandFilter.length > 0) {
+        brandFilter.forEach((brand) => {
+          const filteredProducts = headsets.filter((product) => product.brand === brand);
+          console.log(filteredProducts);
+          productsOnScreenFilterArray.push(...filteredProducts);
+        });
+      }
+      if (conectorFilter.length > 0) {
+        conectorFilter.forEach((conector) => {
+          const filteredProducts = headsets.filter((product) => product.conector === conector);
+          productsOnScreenFilterArray.push(...filteredProducts);
+        });
+      }
+
+      if (productsOnScreenFilterArray.length > 0) {
+        setProductsOnScreen(productsOnScreenFilterArray);
+      } else {
+        setProductsOnScreen(headsets);
+      }
+    }
+    if (pageName === 'keyboard' && brandFilter.length > 0) {
+      brandFilter.forEach((brand) => {
+        const filteredProducts = teclados.filter((product) => product.brand === brand);
+        productsOnScreenFilterArray.push(...filteredProducts);
+      });
+
+      if (productsOnScreenFilterArray.length > 0) {
+        setProductsOnScreen(productsOnScreenFilterArray);
+      } else {
+        setProductsOnScreen(teclados);
+      }
+    }
+    if (pageName === 'mice' && brandFilter.length > 0) {
+      brandFilter.forEach((brand) => {
+        const filteredProducts = mouses.filter((product) => product.brand === brand);
+        productsOnScreenFilterArray.push(...filteredProducts);
+      });
+
+      if (productsOnScreenFilterArray.length > 0) {
+        setProductsOnScreen(productsOnScreenFilterArray);
+      } else {
+        setProductsOnScreen(mouses);
+      }
+    }
+    if (pageName === 'case') {
+      if (brandFilter.length > 0) {
+        brandFilter.forEach((brand) => {
+          const filteredProducts = gabinetes.filter((product) => product.brand === brand);
+          productsOnScreenFilterArray.push(...filteredProducts);
+        });
+      }
+      if (casesizeFilter.length > 0) {
+        casesizeFilter.forEach((casesize) => {
+          const filteredProducts = gabinetes.filter((product) => product.casesize === casesize);
+          productsOnScreenFilterArray.push(...filteredProducts);
+        });
+      }
+      if (materialFilter.length > 0) {
+        materialFilter.forEach((material) => {
+          const filteredProducts = gabinetes.filter((product) => product.material === material);
+          productsOnScreenFilterArray.push(...filteredProducts);
+        });
+      }
+      if (sidepanelFilter.length > 0) {
+        sidepanelFilter.forEach((sidepanel) => {
+          const filteredProducts = gabinetes.filter((product) => product.sidepanel === sidepanel);
+          productsOnScreenFilterArray.push(...filteredProducts);
+        });
+      }
+
+      if (productsOnScreenFilterArray.length > 0) {
+        setProductsOnScreen(productsOnScreenFilterArray);
+      } else {
+        setProductsOnScreen(gabinetes);
+      }
+    }
   };
 
   useEffect(() => {

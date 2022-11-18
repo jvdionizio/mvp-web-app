@@ -137,7 +137,7 @@ const data = {
       value: 184.99,
       description: 'O mouse para jogadores CORSAIR HARPOON RGB PRO conta com um formato ergonômico confortável, um sensor de 12.000 dpi e um design leve de apenas 85 g para horas intermináveis de jogos com o mínimo de esforço. Compatível com iCUE da CORSAIR.',
       evaluation: 5,
-      brand: 'Corsair',
+      brand: 'corsair',
       urls: [
         'https://images.kabum.com.br/produtos/fotos/102439/mouse-gamer-corsair-harpoon-rgb-6-botoes-12000dpi-ch-9301111_mouse-gamer-corsair-harpoon-rgb-6-botoes-12000dpi-ch-9301111_1562326464_gg.jpg',
       ],
@@ -203,7 +203,7 @@ const data = {
       value: 150.00,
       description: 'Com apenas 73 g, o KATAR PRO XT é leve e ágil para passar horas jogando games rápidos de FPS ou MOBA. O formato simétrico e compacto o torna ótimo para diferentes estilos de manuseio: com as pontas dos dedos ou com a mão em forma de garra. O cabo paracord, que reduz resistência, permite movimentos do mouse mais rápidos e precisos.',
       evaluation: 3.2,
-      brand: 'Corsair',
+      brand: 'corsair',
       urls: [
         'https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/c/h/ch-9308111-na5.jpg',
       ],
@@ -244,7 +244,7 @@ const data = {
       value: 300.00,
       description: 'O Teclado gamer mecânico CORSAIR K60 RGB PRO LOW PROFILE é projetado para proporcionar estilo e funcionalidade, com uma estrutura fina e resistente em alumínio escovado, teclas mecânicas CHERRY MX Low Profile SPEED RGB e vibrante luz de fundo RGB por tecla.',
       evaluation: 5,
-      brand: 'Corsair',
+      brand: 'corsair',
       urls: [
         'https://www.corsair.com/medias/sys_master/images/images/h6c/h9d/9873884282910/CH-910D018-BR/Gallery/K60_RGB_PRO_LP_01/-CH-910D018-BR-Gallery-K60-RGB-PRO-LP-01.png_1200Wx1200H',
       ],
@@ -277,7 +277,7 @@ const data = {
       value: 184.99,
       description: 'O teclado gamer CORSAIR K55 RGB PRO XT ilumina seu desktop com a luz de fundo RGB dinâmica por tecla e ajuda em suas jogadas com as seis teclas macro dedicadas.',
       evaluation: 5,
-      brand: 'Corsair',
+      brand: 'corsair',
       urls: [
         'https://www.corsair.com/medias/sys_master/images/images/hc7/h3d/9750899916830/base-k55-rgb-pro-xt-config/Gallery/K55_RGB_PRO_XT_01/-base-k55-rgb-pro-xt-config-Gallery-K55-RGB-PRO-XT-01.png_1200Wx1200H',
       ],
