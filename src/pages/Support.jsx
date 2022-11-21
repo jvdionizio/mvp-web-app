@@ -10,22 +10,37 @@ function Support() {
     <div className="w-full bg-white-smoked">
       <Header />
       <BannerSupport />
-      <div className="text-center py-6">
-        <Heading>
-          <h1>Reembolsos e devoluções</h1>
+      <div className="text-center flex
+        items-center
+        justify-evenly
+        flex-col
+        py-6">
+        <Heading size="lg">
+          <h1 className='py-10'>Reembolso e Devoluções</h1>
         </Heading>
         <Text>
           <p className="py-10">
-            Para obter informações sobre reembolsos/devoluções
-            para seus produtos da MVP, consulte o seguinte site:
+            Clique no link abaixo para mais informações sobre como realizar reembolsos/devoluções 
+            dos seus produtos comprados pelo o site da MVP:
           </p>
         </Text>
-        <Text textColor="300" decoration="underline">
-          <p className="py-10">
-            Informações sobre reembolsos/devoluções de produtos
-            comprados em mvp.com
-          </p>
-        </Text>
+        <div className="
+        bg-purple-300 
+        rounded-3xl 
+        flex-1 
+        py-4 px-3
+        flex
+        justify-evenly
+        w-1/2
+        h-full
+        mb-20
+        " >
+          <Text textColor="white" decoration="underline">
+            <p>
+            Informações sobre reembolsos/devoluções de produtos comprados em mvp.com 
+            </p>
+          </Text>
+        </div>
       </div>
       <Footer />
     </div>
