@@ -90,6 +90,18 @@ function SignIn() {
             </Text>
             </div>
         </div>
+        <div className='bg-white-smoked mb-200'>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>  
+            <br/>
+        </div>
     </div>
     
     )

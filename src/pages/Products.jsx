@@ -7,6 +7,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Filter from '../components/Filter';
 import ProductsCard from '../components/ProductsCard';
+import Button from '../components/styles/Button';
 
 function Products() {
   const {
@@ -22,10 +23,10 @@ function Products() {
   return (
     <div className="w-full bg-white-smoked">
       <Header />
-      <div className="w-11/12 flex flex-col mt-40 m-auto">
-        <div>
+      <div className="w-11/12 flex flex-col mt-36 m-auto">
+        <div className='py-12'>
           <Heading asChild>
-            <h3>HEADSETS</h3>
+            <h1>HEADSETS</h1>
           </Heading>
           <Text textColor="700">
             <p>O melhor audio para você</p>

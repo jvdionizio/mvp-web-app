@@ -69,7 +69,9 @@ function Login() {
                 </Text>
             </Text>
             </div>
+                <hr />
                 <div className="flex flex-row justify-evenly gap-10">
+                    
                     <div className= "flex flex-row justify-evenly gap-10">
                         <Button>
                             <button className='flex flex-row items-center gap-3' type="button">
@@ -91,6 +93,17 @@ function Login() {
                         </Button>
                     </div>
                 </div>
+        </div>
+        <div className='bg-white-smoked mb-200'>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>   
         </div>
     </div>
     )

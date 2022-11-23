@@ -9,7 +9,10 @@ import './styles/Slider.css';
 import { Navigation, A11y } from 'swiper';
 import Text from './styles/Text';
 import Button from './styles/Button';
-import headsetImg from '../images/cate.headset.png';
+import headsetImg from '../images/cate.headset2.png';
+import mouseImg from '../images/cate.mouse2.png';
+import gabineteImg from '../images/cate.gabinete2.webp';
+import tecladoImg from '../images/cate.teclado2.webp';
 
 function SliderProducts() {
   return (
@@ -42,13 +45,13 @@ function SliderProducts() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="p-5 flex items-center gap-8">
-            <img src={ headsetImg } alt="headset" className="w-5/12 p-7 border rounded-2xl" />
+            <img src={ mouseImg } alt="mouse" className="w-5/12 p-7 border rounded-2xl" />
             <div className="flex flex-col justify-around w-4/12 gap-5">
               <Text asChild size="xl">
-                <p>Headset Gamer Sem Fio Logitech G735 LIGHTSPEED</p>
+                <p>Mouse HyperX Pulsefire Haste RGB, 16000 DPI</p>
               </Text>
               <Text asChild size="xl" textColor="300">
-                <p>R$1399,99</p>
+                <p>R$99.99</p>
               </Text>
               <Button>
                 <button type="button">
@@ -60,13 +63,13 @@ function SliderProducts() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="p-5 flex items-center gap-8 ">
-            <img src={ headsetImg } alt="headset" className="w-5/12 p-7 border rounded-2xl" />
+            <img src={ gabineteImg } alt="gabinete" className="w-5/12 p-7 border rounded-2xl" />
             <div className="flex flex-col justify-around w-4/12 gap-5">
               <Text asChild size="xl">
-                <p>Headset Gamer Sem Fio Logitech G735 LIGHTSPEED</p>
+                <p>Carbide Series SPEC-OMEGA RGB – Branco </p>
               </Text>
               <Text asChild size="xl" textColor="300">
-                <p>R$1399,99</p>
+                <p>R$1371,99</p>
               </Text>
               <Button>
                 <button type="button">
@@ -78,13 +81,13 @@ function SliderProducts() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="p-5 flex items-center gap-8">
-            <img src={ headsetImg } alt="headset" className="w-5/12 p-7 border rounded-2xl" />
+            <img src={ tecladoImg } alt="teclado" className="w-5/12 p-7 border rounded-2xl" />
             <div className="flex flex-col justify-around w-4/12 gap-5">
               <Text asChild size="xl">
-                <p>Headset Gamer Sem Fio Logitech G735 LIGHTSPEED</p>
+                <p>K70 PRO MINI WIRELESS 60%</p>
               </Text>
               <Text asChild size="xl" textColor="300">
-                <p>R$1399,99</p>
+                <p>R$1887.99</p>
               </Text>
               <Button>
                 <button type="button">
