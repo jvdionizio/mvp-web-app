@@ -1,11 +1,12 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useContext, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import Context from '../context/Context';
 import Checkbox from './styles/Checkbox';
 import Text from './styles/Text';
 
-function ConectorFilters() {
+function ConectorFilters({ filter }) {
   const {
     productsOnScreenFilter,
     setProductsOnScreenFilter,
@@ -19,91 +20,71 @@ function ConectorFilters() {
     filterProductsOnScreen(pageName);
   }, [productsOnScreenFilter]);
 
+  const filters = {
+    conector: [
+      'usb',
+      'p2',
+      'wireless',
+    ],
+    casesize: [
+      'mid-tower',
+      'full-tower',
+    ],
+    material: [
+      'aço',
+      'vidro temperado',
+    ],
+    sidepanel: [
+      'acrilico',
+      'vidro temperado',
+    ],
+  };
+
   return (
     <div>
       {
         productsOnScreenFilter && (
           <div>
-            <label
-              className="flex py-3 items-center"
-              htmlFor="USB"
-            >
-              <Checkbox
-                border
-                setCheck={
-                  () => (productsOnScreenFilter.conector.includes('usb')
-                    ? setProductsOnScreenFilter({
-                      ...productsOnScreenFilter,
-                      conector: [productsOnScreenFilter.conector
-                        .filter((connector) => connector !== 'usb')],
-                    })
-                    : setProductsOnScreenFilter({
-                      ...productsOnScreenFilter,
-                      conector: [...productsOnScreenFilter.conector, 'usb'],
-                    }))
-                }
-                id="USB"
-                name="USB"
-              />
-              <Text>
-                <p className="px-3">USB</p>
-              </Text>
-            </label>
-            <label
-              className="flex py-3 items-center"
-              htmlFor="wireless"
-            >
-              <Checkbox
-                border
-                setCheck={
-                  () => (productsOnScreenFilter.conector.includes('wireless')
-                    ? setProductsOnScreenFilter({
-                      ...productsOnScreenFilter,
-                      conector: [productsOnScreenFilter.conector
-                        .filter((connector) => connector !== 'wireless')],
-                    })
-                    : setProductsOnScreenFilter({
-                      ...productsOnScreenFilter,
-                      conector: [...productsOnScreenFilter.conector, 'wireless'],
-                    }))
-                }
-                id="wireless"
-                name="wireless"
-              />
-              <Text>
-                <p className="px-3">Wireless</p>
-              </Text>
-            </label>
-            <label
-              className="flex py-3 items-center"
-              htmlFor="P2"
-            >
-              <Checkbox
-                border
-                setCheck={
-                  () => (productsOnScreenFilter.conector.includes('p2')
-                    ? setProductsOnScreenFilter({
-                      ...productsOnScreenFilter,
-                      conector: [productsOnScreenFilter.conector
-                        .filter((connector) => connector !== 'p2')],
-                    })
-                    : setProductsOnScreenFilter({
-                      ...productsOnScreenFilter,
-                      conector: [...productsOnScreenFilter.conector, 'p2'],
-                    }))
-                }
-                id="P2"
-                name="P2"
-              />
-              <Text>
-                <p className="px-3">P2</p>
-              </Text>
-            </label>
+            {
+
+              filters[filter].map((item) => (
+                <label
+                  className="flex py-3 items-center"
+                  htmlFor={ item }
+                  key={ item }
+                >
+                  <Checkbox
+                    border
+                    setCheck={
+                      () => (productsOnScreenFilter[filter].includes({ item })
+                        ? setProductsOnScreenFilter({
+                          ...productsOnScreenFilter,
+                          [filter]: productsOnScreenFilter[filter]
+                            .filter((connector) => connector !== item),
+                        })
+                        : setProductsOnScreenFilter({
+                          ...productsOnScreenFilter,
+                          [filter]: [...productsOnScreenFilter[filter], item],
+                        }))
+                    }
+                    id={ item }
+                    name={ item }
+                  />
+                  <Text asChild uppercase>
+                    <p className="px-3">{item}</p>
+                  </Text>
+                </label>
+              ))
+            }
           </div>
         )
       }
     </div>
   );
 }
+
+ConectorFilters.propTypes = {
+  filter: PropTypes.string.isRequired,
+};
 
 export default ConectorFilters;

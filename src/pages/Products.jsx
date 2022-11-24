@@ -23,8 +23,8 @@ function Products() {
   return (
     <div className="w-full bg-white-smoked">
       <Header />
-      <div className="w-11/12 flex flex-col mt-36 m-auto">
-        <div className='py-12'>
+      <div className="w-9/12 flex flex-col mt-36 mx-auto">
+        <div className="py-12">
           <Heading asChild>
             <h1>HEADSETS</h1>
           </Heading>
@@ -33,17 +33,32 @@ function Products() {
           </Text>
         </div>
         <div className="w-full flex gap-16">
-          <Filter pathName={ pathName } />
-          <div className="w-10/12 flex flex-wrap justify-between gap-y-10">
+          <Filter pageName={ pathName } />
+          <div
+            className="
+              w-4/5
+              flex flex-wrap
+              gap-y-10
+              gap-x-10
+              "
+          >
             {
-              productsOnScreen && productsOnScreen.map((product, index) => (
+              // eslint-disable-next-line max-len
+              productsOnScreen && productsOnScreen.length ? productsOnScreen.map((product, index) => (
                 <ProductsCard
                   key={ index }
                   url={ product.urls[0] }
                   price={ product.value }
                   name={ product.name }
+                  id={ product.id }
                 />
-              ))
+              )) : (
+                <Text textColor="700" asChild>
+                  <p>
+                    Não encontramos nenhum produto correspondente a sua solicitação
+                  </p>
+                </Text>
+              )
             }
           </div>
         </div>

@@ -18,8 +18,8 @@ function App() {
           <Route exact path="/products/:categories" element={ <Products /> } />
           <Route exact path="/product/:id" element={ <ProductDetails /> } />
           <Route exact path="/support" element={ <Support /> } />
-          <Route exact path="/downloads" element={ <Downloads /> } />
-          <Route exact path="/support/:categories" element={ <Support /> } />
+          <Route exact path="/support/contact" element={ <Support /> } />
+          <Route exact path="/support/downloads" element={ <Downloads /> } />
           <Route exact path="/login" element={ <Login /> } />
           <Route exact path="/signin" element={ <SignIn /> } />
           <Route exact path="/*" element={ <NotFound /> } />

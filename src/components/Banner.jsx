@@ -11,6 +11,8 @@ import Heading from './styles/Heading';
 import Text from './styles/Text';
 import Button from './styles/Button';
 import tecladoB1 from '../images/tecladoB1.png';
+import mouseB2 from '../images/mouseB2.png';
+import gabineteB3 from '../images/gabineteB3.png';
 
 function Banner() {
   return (
@@ -66,9 +68,88 @@ function Banner() {
             <img alt="teclado aurora" src={ tecladoB1 } className="w-1/2 lg:w-1/3" />
           </div>
         </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>
+          <div
+            className="
+              w-full
+              h-[46rem]
+              banner2
+              flex
+              flex-col
+              lg:flex-row
+              items-center
+              justify-center
+            "
+          >
+            <div className="flex flex-col w-1/2 lg:w-1/3 gap-6">
+              <div>
+                <Heading asChild>
+                  <h1>PLAY YOUR WAY</h1>
+                </Heading>
+                <span>
+                  <Text font="ubuntu">
+                    <p>Explore novos mundos e divirta -se com a </p>
+                  </Text>
+                  <Text font="ubuntu" decoration="bold">
+                    <p>Aurora Collection,</p>
+                  </Text>
+                  <Text font="ubuntu">
+                    <p> o novo lançamento da Logitech. </p>
+                  </Text>
+                </span>
+              </div>
+              <Button asChild bgColor="orange">
+                <button
+                  type="button"
+                >
+                  EXPLORE
+                </button>
+              </Button>
+            </div>
+            <img alt="mouse Logitech" src={ mouseB2 } className="w-1/2 lg:w-1/4" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div
+            className="
+              w-full
+              h-[46rem]
+              banner3
+              flex
+              flex-col
+              lg:flex-row
+              items-center
+              justify-center
+            "
+          >
+            <div className="flex flex-col w-1/2 lg:w-1/3 gap-6">
+              <div>
+                <Heading asChild>
+                  <h1>PLAY YOUR WAY</h1>
+                </Heading>
+                <span>
+                  <Text font="ubuntu">
+                    <p>Explore novos mundos e divirta -se com a </p>
+                  </Text>
+                  <Text font="ubuntu" decoration="bold">
+                    <p>Aurora Collection,</p>
+                  </Text>
+                  <Text font="ubuntu">
+                    <p> o novo lançamento da Logitech. </p>
+                  </Text>
+                </span>
+              </div>
+              <Button asChild bgColor="blue">
+                <button
+                  type="button"
+                >
+                  CONHEÇA
+                </button>
+              </Button>
+            </div>
+            <img alt="Gabinete Corsair 4000D " src={ gabineteB3 } className="w-1/2 lg:w-1/3" />
+          </div>
+        </SwiperSlide>
       </Swiper>
     </div>
   );
