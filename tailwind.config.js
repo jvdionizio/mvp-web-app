@@ -45,6 +45,15 @@ module.exports = {
         500: '#81D8F7',
         300: '#98E1FB',
       },
+
+      orange: {
+        500: '#FC511E',
+        300: '#E66110',
+      },
+      blue: {
+        500: '#1274E3',
+        300: '#20C1FA',
+      },
     },
     extend: {
       fontFamily: {

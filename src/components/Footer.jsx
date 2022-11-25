@@ -13,11 +13,9 @@ function Footer() {
       <div className="flex flex-col w-full items-center gap-16">
         <div className="flex w-full justify-between mt-28">
           <div className="flex gap-4">
-            <Link to="/">
-              <Icon weight="fill">
+            <Icon weight="fill">
                 <FacebookLogo />
               </Icon>
-            </Link>
             <Link to="/">
               <Icon weight="fill">
                 <InstagramLogo />

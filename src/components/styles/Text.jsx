@@ -32,6 +32,7 @@ export default function Text({
           'text-2md': size === 'xl',
         },
         {
+          'line-through': decoration === 'risco',
           'text-decoration-line: underline': decoration === 'underline',
           'font-bold': decoration === 'bold',
           'font-medium': decoration === 'medium',

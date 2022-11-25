@@ -7,7 +7,21 @@
   background: linear-gradient(0deg, rgba(180,121,232,0.9023984593837535) 0%, rgba(158,229,255,1) 100%);
 }
 
+.banner2 {
+  background: rgb(229,54,38);
+background: linear-gradient(0deg, rgba(229,54,38,0.8) 0%, rgba(233,212,96,0.7) 100%);
+}
+
+.banner3 {
+  background: rgb(35,142,142);
+background: linear-gradient(0deg, rgba(35,142,142,1) 0%, rgba(33,204,227,1) 19%, rgba(42,228,227,1) 47%, rgba(51,255,226,1) 69%, rgba(199,255,107,1) 100%);
+}
+
 .footer {
   background: rgb(180,121,232);
   background: linear-gradient(0deg, rgba(180,121,232,0.9023984593837535) 46%, rgba(255,255,255,1) 100%);
+}
+
+.banner-support {
+  background: url("https://images.unsplash.com/photo-1603481546579-65d935ba9cdd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80") no-repeat
 }

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable react/jsx-max-depth */
 /* eslint-disable max-len */
 import React, { useState } from 'react';
@@ -11,7 +12,6 @@ import SubHeader from './SubHeader';
 function Header() {
   const { pathname } = useLocation();
   const pageName = pathname.split('/')[1];
-  console.log(pageName);
   const [navBarTransparent, setNavBarTransparent] = useState(pageName !== '');
   const [showNavBar, setShowNavBar] = useState(true);
   const [position, setPosition] = useState(0);
@@ -78,7 +78,7 @@ function Header() {
           {
             pageName !== '' && (
               <Link to="/">
-                <HeaderBtn selected={ pageName === '' }>
+                <HeaderBtn>
                   <button type="button">
                     HOME
                   </button>
@@ -87,9 +87,7 @@ function Header() {
             )
           }
           <Link to="/products/headsets">
-            <HeaderBtn
-              selected
-            >
+            <HeaderBtn selected={ pageName === 'products' }>
               <button
                 type="button"
               >
@@ -98,7 +96,7 @@ function Header() {
             </HeaderBtn>
           </Link>
           <Link to="/brands">
-            <HeaderBtn>
+            <HeaderBtn selected={ pageName === 'brands' }>
               <button
                 type="button"
               >
@@ -107,7 +105,7 @@ function Header() {
             </HeaderBtn>
           </Link>
           <Link to="/support">
-            <HeaderBtn>
+            <HeaderBtn selected={ pageName === 'support' }>
               <button
                 type="button"
               >
@@ -119,7 +117,7 @@ function Header() {
         <div
           className="
             flex
-            gap-3
+            gap-5
           "
         >
           <Icon>
@@ -133,7 +131,7 @@ function Header() {
           </Icon>
         </div>
       </div>
-      {pageName !== '' && <SubHeader />}
+      { (pageName === 'products' || pageName === 'support' || pageName === 'brands') && <SubHeader /> }
     </div>
   );
 }
