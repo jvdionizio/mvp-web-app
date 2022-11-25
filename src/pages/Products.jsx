@@ -7,7 +7,6 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Filter from '../components/Filter';
 import ProductsCard from '../components/ProductsCard';
-import Button from '../components/styles/Button';
 
 function Products() {
   const {
@@ -20,13 +19,25 @@ function Products() {
   useEffect(() => {
     setProductsOnScreen(products[pathName]);
   }, [pathName]);
+  const title = () => {
+    if (pathName === 'headsets') {
+      console.log('Entrou no Headsets');
+      return 'HEADSETS';
+    } if (pathName === 'keyboard') {
+      return 'TECLADOS';
+    } if (pathName === 'mice') {
+      return 'MOUSES';
+    } if (pathName === 'case') {
+      return 'GABINETES';
+    }
+  };
   return (
-    <div className="w-full bg-white-smoked">
+    <div className="w-full bg-white-1000">
       <Header />
       <div className="w-9/12 flex flex-col mt-36 mx-auto">
         <div className="py-12">
-          <Heading asChild>
-            <h1>HEADSETS</h1>
+          <Heading>
+            { title() }
           </Heading>
           <Text textColor="700">
             <p>O melhor audio para você</p>

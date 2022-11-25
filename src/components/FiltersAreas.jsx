@@ -6,7 +6,7 @@ import Context from '../context/Context';
 import Checkbox from './styles/Checkbox';
 import Text from './styles/Text';
 
-function ConectorFilters({ filter }) {
+function FiltersAreas({ filter }) {
   const {
     productsOnScreenFilter,
     setProductsOnScreenFilter,
@@ -56,7 +56,7 @@ function ConectorFilters({ filter }) {
                   <Checkbox
                     border
                     setCheck={
-                      () => (productsOnScreenFilter[filter].includes({ item })
+                      () => (productsOnScreenFilter[filter].includes(item)
                         ? setProductsOnScreenFilter({
                           ...productsOnScreenFilter,
                           [filter]: productsOnScreenFilter[filter]
@@ -83,8 +83,8 @@ function ConectorFilters({ filter }) {
   );
 }
 
-ConectorFilters.propTypes = {
+FiltersAreas.propTypes = {
   filter: PropTypes.string.isRequired,
 };
 
-export default ConectorFilters;
+export default FiltersAreas;

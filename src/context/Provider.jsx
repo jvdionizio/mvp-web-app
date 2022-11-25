@@ -31,7 +31,7 @@ function Provider({ children }) {
     const { brand: brandFilter, conector: conectorFilter, casesize: casesizeFilter, material: materialFilter, sidepanel: sidepanelFilter } = productsOnScreenFilter;
     console.log(brandFilter.length, conectorFilter);
     if (pageName === 'headsets') {
-      let filteredProducts = [];
+      let filteredProducts = headsets;
       if (brandFilter.length > 0) {
         filteredProducts = headsets.filter((product) => brandFilter.includes(product.brand));
       }

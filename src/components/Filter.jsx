@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Text from './styles/Text';
 import BrandFilters from './BrandFilters';
-import ConectorFilters from './ConectorFilters';
+import FiltersAreas from './FiltersAreas';
 
 function Filter({ pageName }) {
   return (
@@ -41,7 +41,7 @@ function Filter({ pageName }) {
               <Text asChild decoration="bold">
                 <p className="text-left">Conectores</p>
               </Text>
-              <ConectorFilters filter="conector" />
+              <FiltersAreas filter="conector" />
             </>
           )
         }
@@ -52,17 +52,17 @@ function Filter({ pageName }) {
               <Text asChild decoration="bold">
                 <p className="text-left">Tamanho</p>
               </Text>
-              <ConectorFilters filter="casesize" />
+              <FiltersAreas filter="casesize" />
               <hr />
               <Text asChild decoration="bold">
                 <p className="text-left">Material</p>
               </Text>
-              <ConectorFilters filter="material" />
+              <FiltersAreas filter="material" />
               <hr />
               <Text asChild decoration="bold">
                 <p className="text-left">Painel Lateral</p>
               </Text>
-              <ConectorFilters filter="sidepanel" />
+              <FiltersAreas filter="sidepanel" />
             </>
           )
         }
