@@ -147,7 +147,11 @@ function Banner() {
                 </button>
               </Button>
             </div>
-            <img alt="Gabinete Corsair 4000D " src={ gabineteB3 } className="w-1/2 lg:w-1/3" />
+            <img
+              alt="Gabinete Corsair 4000D"
+              src={ gabineteB3 }
+              className="w-1/2 lg:w-1/3"
+            />
           </div>
         </SwiperSlide>
       </Swiper>
