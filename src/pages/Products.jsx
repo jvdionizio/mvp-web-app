@@ -48,9 +48,12 @@ function Products() {
           <div
             className="
               w-4/5
-              flex flex-wrap
+              flex
+              flex-wrap
               gap-y-10
-              gap-x-10
+              gap-x-8
+              justify-center
+              mb-20
               "
           >
             {
