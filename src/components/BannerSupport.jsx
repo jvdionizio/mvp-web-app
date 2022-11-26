@@ -25,7 +25,7 @@ function BannerSupport() {
         <div>
           <div>
             <Heading textColor="000">
-              Bem-vindo ao suporte da MVP
+              <h1 className="text-center">Suporte MVP</h1>
             </Heading>
             <div className="h-full rounded-r-md py-4 px-3 flex items-center">
               <TextInputRoot

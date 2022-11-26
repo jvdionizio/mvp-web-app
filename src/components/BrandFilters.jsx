@@ -37,9 +37,9 @@ function BrandFilters() {
                   () => (productsOnScreenFilter.brand.includes('corsair')
                     ? setProductsOnScreenFilter({
                       ...productsOnScreenFilter,
-                      brand: [productsOnScreenFilter.brand
-                        .filter((brand) => brand !== 'corsair')],
-                    }, console.log(productsOnScreenFilter))
+                      brand: productsOnScreenFilter.brand
+                        .filter((brand) => brand !== 'corsair'),
+                    })
                     : setProductsOnScreenFilter({
                       ...productsOnScreenFilter,
                       brand: [...productsOnScreenFilter.brand, 'corsair'],
@@ -60,13 +60,13 @@ function BrandFilters() {
                   () => (productsOnScreenFilter.brand.includes('logitech')
                     ? setProductsOnScreenFilter({
                       ...productsOnScreenFilter,
-                      brand: [...productsOnScreenFilter.brand
-                        .filter((brand) => brand !== 'logitech')],
-                    }, console.log(productsOnScreenFilter))
+                      brand: productsOnScreenFilter.brand
+                        .filter((brand) => brand !== 'logitech'),
+                    })
                     : setProductsOnScreenFilter({
                       ...productsOnScreenFilter,
                       brand: [...productsOnScreenFilter.brand, 'logitech'],
-                    }, console.log(productsOnScreenFilter)))
+                    }))
                 }
                 id="logitech"
                 name="logitech"
@@ -83,13 +83,13 @@ function BrandFilters() {
                   () => (productsOnScreenFilter.brand.includes('hyperx')
                     ? setProductsOnScreenFilter({
                       ...productsOnScreenFilter,
-                      brand: [...productsOnScreenFilter.brand
-                        .filter((brand) => brand !== 'hyperx')],
-                    }, console.log(productsOnScreenFilter))
+                      brand: productsOnScreenFilter.brand
+                        .filter((brand) => brand !== 'hyperx'),
+                    })
                     : setProductsOnScreenFilter({
                       ...productsOnScreenFilter,
                       brand: [...productsOnScreenFilter.brand, 'hyperx'],
-                    }, console.log(productsOnScreenFilter)))
+                    }))
                 }
                 id="hyperx"
                 name="hyperx"
@@ -106,13 +106,13 @@ function BrandFilters() {
                   () => (productsOnScreenFilter.brand.includes('redragon')
                     ? setProductsOnScreenFilter({
                       ...productsOnScreenFilter,
-                      brand: [...productsOnScreenFilter.brand
-                        .filter((brand) => brand !== 'redragon')],
-                    }, console.log(productsOnScreenFilter))
+                      brand: productsOnScreenFilter.brand
+                        .filter((brand) => brand !== 'redragon'),
+                    })
                     : setProductsOnScreenFilter({
                       ...productsOnScreenFilter,
                       brand: [...productsOnScreenFilter.brand, 'redragon'],
-                    }, console.log(productsOnScreenFilter)))
+                    }))
                 }
                 id="redragon"
                 name="redragon"

@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Text from './styles/Text';
 import BrandFilters from './BrandFilters';
+import FiltersAreas from './FiltersAreas';
 
-function Filter(pageName) {
+function Filter({ pageName }) {
   return (
     <div
       className="
@@ -13,7 +14,8 @@ function Filter(pageName) {
         py-4
         flex
         flex-col
-        w-4/12
+        w-1/5
+        h-full
         items-center
       "
     >
@@ -21,36 +23,49 @@ function Filter(pageName) {
         <Text asChild uppercase decoration="bold">
           <p className="text-left">Filtros</p>
         </Text>
-        <hr />
-        <Text asChild decoration="bold">
-          <p className="text-left">Marcas</p>
-        </Text>
-        <BrandFilters />
-        <hr />
         {
-          pageName === 'headsets' && (
-            <Text asChild decoration="bold">
-              <p className="text-left">Conectores</p>
-            </Text>
+          pageName !== 'case' && (
+            <>
+              <hr />
+              <Text asChild decoration="bold">
+                <p className="text-left">Marcas</p>
+              </Text>
+              <BrandFilters />
+            </>
           )
         }
-        <hr />
-        <Text asChild decoration="bold">
-          <p className="text-left">Audio</p>
-        </Text>
-        <div className="flex items-center">
-
-          <Text>
-            <p className="px-3">Stereo</p>
-          </Text>
-        </div>
-        <div className="flex items-center">
-
-          <Text>
-            <p className="px-3">Suround</p>
-          </Text>
-        </div>
-
+        {
+          pageName === 'headsets' && (
+            <>
+              <hr />
+              <Text asChild decoration="bold">
+                <p className="text-left">Conectores</p>
+              </Text>
+              <FiltersAreas filter="conector" />
+            </>
+          )
+        }
+        {
+          pageName === 'case' && (
+            <>
+              <hr />
+              <Text asChild decoration="bold">
+                <p className="text-left">Tamanho</p>
+              </Text>
+              <FiltersAreas filter="casesize" />
+              <hr />
+              <Text asChild decoration="bold">
+                <p className="text-left">Material</p>
+              </Text>
+              <FiltersAreas filter="material" />
+              <hr />
+              <Text asChild decoration="bold">
+                <p className="text-left">Painel Lateral</p>
+              </Text>
+              <FiltersAreas filter="sidepanel" />
+            </>
+          )
+        }
       </div>
     </div>
   );

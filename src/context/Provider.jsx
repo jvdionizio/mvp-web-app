@@ -29,82 +29,61 @@ function Provider({ children }) {
 
   const filterProductsOnScreen = (pageName) => {
     const { brand: brandFilter, conector: conectorFilter, casesize: casesizeFilter, material: materialFilter, sidepanel: sidepanelFilter } = productsOnScreenFilter;
-    const productsOnScreenFilterArray = [];
+    console.log(brandFilter.length, conectorFilter);
     if (pageName === 'headsets') {
+      let filteredProducts = headsets;
       if (brandFilter.length > 0) {
-        brandFilter.forEach((brand) => {
-          const filteredProducts = headsets.filter((product) => product.brand === brand);
-          console.log(filteredProducts);
-          productsOnScreenFilterArray.push(...filteredProducts);
-        });
+        filteredProducts = headsets.filter((product) => brandFilter.includes(product.brand));
       }
       if (conectorFilter.length > 0) {
-        conectorFilter.forEach((conector) => {
-          const filteredProducts = headsets.filter((product) => product.conector === conector);
-          productsOnScreenFilterArray.push(...filteredProducts);
-        });
+        filteredProducts = filteredProducts.filter((product) => conectorFilter.includes(product.conector));
       }
-
-      if (productsOnScreenFilterArray.length > 0) {
-        setProductsOnScreen(productsOnScreenFilterArray);
-      } else {
+      if (brandFilter.length === 0 && conectorFilter.length === 0) {
         setProductsOnScreen(headsets);
+      } else {
+        setProductsOnScreen(filteredProducts);
       }
     }
-    if (pageName === 'keyboard' && brandFilter.length > 0) {
-      brandFilter.forEach((brand) => {
-        const filteredProducts = teclados.filter((product) => product.brand === brand);
-        productsOnScreenFilterArray.push(...filteredProducts);
-      });
-
-      if (productsOnScreenFilterArray.length > 0) {
-        setProductsOnScreen(productsOnScreenFilterArray);
-      } else {
+    if (pageName === 'keyboard') {
+      let filteredProducts = [];
+      if (brandFilter.length > 0) {
+        filteredProducts = teclados.filter((product) => brandFilter.includes(product.brand.toLowerCase()));
+      }
+      if (brandFilter.length === 0) {
         setProductsOnScreen(teclados);
+      } else {
+        setProductsOnScreen(filteredProducts);
       }
     }
-    if (pageName === 'mice' && brandFilter.length > 0) {
-      brandFilter.forEach((brand) => {
-        const filteredProducts = mouses.filter((product) => product.brand === brand);
-        productsOnScreenFilterArray.push(...filteredProducts);
-      });
-
-      if (productsOnScreenFilterArray.length > 0) {
-        setProductsOnScreen(productsOnScreenFilterArray);
-      } else {
+    if (pageName === 'mice') {
+      let filteredProducts = [];
+      if (brandFilter.length > 0) {
+        filteredProducts = mouses.filter((product) => brandFilter.includes(product.brand.toLowerCase()));
+      }
+      if (brandFilter.length === 0) {
         setProductsOnScreen(mouses);
+      } else {
+        setProductsOnScreen(filteredProducts);
       }
     }
     if (pageName === 'case') {
+      let filteredProducts = [];
       if (brandFilter.length > 0) {
-        brandFilter.forEach((brand) => {
-          const filteredProducts = gabinetes.filter((product) => product.brand === brand);
-          productsOnScreenFilterArray.push(...filteredProducts);
-        });
+        filteredProducts = gabinetes.filter((product) => brandFilter.includes(product.brand.toLowerCase()));
       }
       if (casesizeFilter.length > 0) {
-        casesizeFilter.forEach((casesize) => {
-          const filteredProducts = gabinetes.filter((product) => product.casesize === casesize);
-          productsOnScreenFilterArray.push(...filteredProducts);
-        });
+        filteredProducts = filteredProducts.filter((product) => casesizeFilter.includes(product.casesize));
       }
       if (materialFilter.length > 0) {
-        materialFilter.forEach((material) => {
-          const filteredProducts = gabinetes.filter((product) => product.material === material);
-          productsOnScreenFilterArray.push(...filteredProducts);
-        });
+        filteredProducts = filteredProducts.filter((product) => materialFilter.includes(product.material));
       }
       if (sidepanelFilter.length > 0) {
-        sidepanelFilter.forEach((sidepanel) => {
-          const filteredProducts = gabinetes.filter((product) => product.sidepanel === sidepanel);
-          productsOnScreenFilterArray.push(...filteredProducts);
-        });
+        filteredProducts = filteredProducts.filter((product) => sidepanelFilter.includes(product.sidepanel));
       }
-
-      if (productsOnScreenFilterArray.length > 0) {
-        setProductsOnScreen(productsOnScreenFilterArray);
-      } else {
+      if (brandFilter.length === 0 && casesizeFilter.length === 0 && materialFilter.length === 0 && sidepanelFilter.length === 0) {
         setProductsOnScreen(gabinetes);
+      } else {
+        setProductsOnScreen(filteredProducts);
       }
     }
   };
