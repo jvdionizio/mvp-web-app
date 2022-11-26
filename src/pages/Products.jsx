@@ -31,6 +31,18 @@ function Products() {
       return 'GABINETES';
     }
   };
+  const subtitle = () => {
+    if (pathName === 'headsets') {
+      console.log('Entrou no Headsets');
+      return ' O melhor som e audio para você ';
+    } if (pathName === 'keyboard') {
+      return ' Conforto e estilo ';
+    } if (pathName === 'mice') {
+      return ' Agilidade e precisão ';
+    } if (pathName === 'case') {
+      return ' As melhores estrutras para seu pc ';
+    }
+  };
   return (
     <div className="w-full bg-white-1000">
       <Header />
@@ -40,7 +52,7 @@ function Products() {
             { title() }
           </Heading>
           <Text textColor="700">
-            <p>O melhor audio para você</p>
+            { subtitle() }
           </Text>
         </div>
         <div className="w-full flex gap-16">

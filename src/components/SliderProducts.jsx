@@ -48,7 +48,7 @@ function SliderProducts() {
             <img src={ mouseImg } alt="mouse" className="w-5/12 p-7 border rounded-2xl" />
             <div className="flex flex-col justify-around w-4/12 gap-5">
               <Text asChild size="xl">
-                <p>Mouse HyperX Pulsefire Haste RGB, 16000 DPI</p>
+                <p>Mouse Gamer Logitech G203 Lightsync Rgb</p>
               </Text>
               <Text asChild size="xl" textColor="300">
                 <p>R$99.99</p>

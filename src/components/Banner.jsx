@@ -60,6 +60,7 @@ function Banner() {
               <Button>
                 <button
                   type="button"
+                  className='w-1/2'
                 >
                   DESCUBRA
                 </button>
@@ -88,19 +89,20 @@ function Banner() {
                 </Heading>
                 <span>
                   <Text font="ubuntu">
-                    <p>Explore novos mundos e divirta -se com a </p>
+                    <p>Sinta a energia com a </p>
                   </Text>
                   <Text font="ubuntu" decoration="bold">
-                    <p>Aurora Collection,</p>
+                    <p>Fusion Collection,</p>
                   </Text>
                   <Text font="ubuntu">
-                    <p> o novo lançamento da Logitech. </p>
+                    <p> uma colaboração entre Logitech e Redragon. </p>
                   </Text>
                 </span>
               </div>
               <Button asChild bgColor="orange">
                 <button
                   type="button"
+                  className='w-1/2'
                 >
                   EXPLORE
                 </button>
@@ -129,19 +131,20 @@ function Banner() {
                 </Heading>
                 <span>
                   <Text font="ubuntu">
-                    <p>Explore novos mundos e divirta -se com a </p>
+                    <p>Embarque nessa aventura com a </p>
                   </Text>
                   <Text font="ubuntu" decoration="bold">
-                    <p>Aurora Collection,</p>
+                    <p>Aqua Collection,</p>
                   </Text>
                   <Text font="ubuntu">
-                    <p> o novo lançamento da Logitech. </p>
+                    <p> o novo lançamento da Corsair. </p>
                   </Text>
                 </span>
               </div>
               <Button asChild bgColor="blue">
                 <button
                   type="button"
+                  className='w-1/2'
                 >
                   CONHEÇA
                 </button>

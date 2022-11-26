@@ -20,6 +20,7 @@ function App() {
           <Route exact path="/support" element={ <Support /> } />
           <Route exact path="/support/contact" element={ <Support /> } />
           <Route exact path="/support/downloads" element={ <Downloads /> } />
+          <Route exact path="/support/refound" element={ <Support /> } />
           <Route exact path="/login" element={ <Login /> } />
           <Route exact path="/signin" element={ <SignIn /> } />
           <Route exact path="/*" element={ <NotFound /> } />
