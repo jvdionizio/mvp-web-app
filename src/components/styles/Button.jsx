@@ -25,6 +25,7 @@ function Button({ children, remove, color, bgColor, rounded }, props) {
           'bg-orange-500': bgColor === 'orange',
           'bg-blue-500': bgColor === 'blue',
           'bg-purple-500': bgColor === 'purple',
+          'bg-transparent': bgColor === 'transparent',
         },
         'text-sm w-full',
         'transition-colors',
